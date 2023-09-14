@@ -15,6 +15,6 @@ public class PublicClassExam {
 
 class Class2{
 	public Class2() {
-		
+
 	}
 }

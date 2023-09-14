@@ -9,25 +9,25 @@ public class Arrays {
 		/*
 		 * int size = 3; String[] score1 = new String[size]; String[] test = new
 		 * String[size];
-		 * 
+		 *
 		 * System.out.println(score1.toString()); System.out.printf("%x\n",
 		 * score1.hashCode());
-		 * 
+		 *
 		 * System.out.println(test.toString()); System.out.printf("%x\n",
 		 * test.hashCode());
 		 */
 		//String[][] arr1;
 		String arr2[][];
 		//String[] arr3[];
-		
+
 		//arr1 = new String[2][3];
-		
+
 		// 가변 배열(Variable Length Arrays)
 		// 불규칙 배열(Ragged Arrays)
 		arr2 = new String[2][];
 		arr2[0] = new String[] {"Linux", "MariaDB", "C", "C++", "Java"};
 		arr2[1] = new String[] {"Network", "Prototype", "Project"};
-		
+
 		// 확장 for문
 		for(String[] elem : arr2) {
 			for(String str : elem) {
@@ -35,10 +35,10 @@ public class Arrays {
 			}
 			System.out.println();
 		}
-		
+
 		printArr(arr2);
 	}
-	
+
 	public static void printArr(String[][] args) {
 		for(String[] elem : args) {
 			for(String str : elem) {

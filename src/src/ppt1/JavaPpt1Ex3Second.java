@@ -13,10 +13,10 @@ public class JavaPpt1Ex3Second {
 		}
 		if(isLeapyear(year))
 			System.out.println("윤년입니다.");
-		else 
+		else
 			System.out.println("윤년이 아닙니다.");
 	}
-	
+
 	public static boolean isLeapyear(int year) {
 		if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
 			return true;

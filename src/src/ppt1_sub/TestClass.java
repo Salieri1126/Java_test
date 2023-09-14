@@ -15,6 +15,6 @@ public class TestClass extends SystemOutPrintln {
 		test1();
 		test2();
 	}
-	
+
 
 }

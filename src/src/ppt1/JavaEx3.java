@@ -14,7 +14,7 @@ public class JavaEx3 {
 			System.out.printf("세 정수는 %d %d %d 이고, 가장 큰 수는 %d 입니다.", num1, num2, num3, find_bigger(num1,num2,num3));
 		}
 	}
-	
+
 	public static int find_bigger(int num1, int num2, int num3) {
 		if((num1>num2) && (num1>num3)) {
 			return num1;
