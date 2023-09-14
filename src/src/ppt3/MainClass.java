@@ -12,7 +12,7 @@ public class MainClass {
 		imp.method1();
 		imp.method2();
 		
-		System.out.println(imp.value1);
+		System.out.println(imp.VALUE1);
 		System.out.println(imp instanceof MyImplements);
 		System.out.println(imp instanceof MyInterface);
 	}
