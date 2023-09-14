@@ -3,30 +3,17 @@ package src.ppt3;
 public class MainClass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Person lee = new Person("lee", 20, "810000-2000000");
-		Student cho = new Student("cho", 21, "910000-1000000", "한직교", 1, 3);
+		Shape circle = new Circle(5.0);
+		System.out.println("Area of circle : " + circle.calculateArea());
+		circle.print();
 		
-		lee.greeting();
-		System.out.println("----------------");
+		MyImplements imp = new MyImplements();
 		
-		cho.greeting();
-		System.out.println("----------------");
+		imp.method1();
+		imp.method2();
 		
-		cho.changeName("Cho Young Ja");
-		lee.greeting();
-		System.out.println("----------------");
-		
-		cho.greeting();
-		System.out.println("----------------");
-	}
-
-}
-
-class TestClass{
-	
-	@Override
-	public String toString() {
-		return "I am TestClass.";
+		System.out.println(imp.value1);
+		System.out.println(imp instanceof MyImplements);
+		System.out.println(imp instanceof MyInterface);
 	}
 }
