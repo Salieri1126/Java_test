@@ -3,17 +3,20 @@ package src.ppt3;
 public class MainClass {
 
 	public static void main(String[] args) {
-		Shape circle = new Circle(5.0);
-		System.out.println("Area of circle : " + circle.calculateArea());
-		circle.print();
+		OuterClass.StaticNestedClass staticClass = new OuterClass.StaticNestedClass();
+		staticClass.display();
 		
-		MyImplements imp = new MyImplements();
+		System.out.println("=================");
 		
-		imp.method1();
-		imp.method2();
+		OuterClass outerClass = new OuterClass();
+		OuterClass.NonStaticNestedClass nestedClass1 = outerClass.new NonStaticNestedClass("first");
+		OuterClass.NonStaticNestedClass nestedClass2 = outerClass.new NonStaticNestedClass("second");
+		OuterClass.NonStaticNestedClass nestedClass3 = outerClass.new NonStaticNestedClass("third");
 		
-		System.out.println(imp.VALUE1);
-		System.out.println(imp instanceof MyImplements);
-		System.out.println(imp instanceof MyInterface);
+		nestedClass1.display();
+		nestedClass2.display();
+		nestedClass3.display();
+		
+		System.out.println(outerClass.getCnt());
 	}
 }
