@@ -1,49 +1,29 @@
 package src.ppt5;
 
-import java.util.Vector;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class MainClass {
 	
 	public static void main(String[] args) {
 		
-		Exam informationEngineer = new Exam();
-		Exam securityEngineer = new Exam();
+		HashMap<Character, Integer> item = new HashMap<>();
 		
-		System.out.println("정보처리 기사에 응시한 학생 번호");
-		Scanner scan = new Scanner(System.in);
+		System.out.println("문자열을 입력하세요.");
+		String exit = null;
 		
-		while(!scan.hasNextInt()) {
-			int num = scan.nextInt();
-			if( num >=1 && num<=30) {
-				informationEngineer.setStuNum(num);				
-			}
-			else {
-				System.out.println("범위를 벗어났습니다.");
-				break;
-			}
-		}
-		scan.close();
-		System.out.println(informationEngineer.getVector());
-		
-		try (Scanner scan1 = new Scanner(System.in)) {
-			System.out.println("보안기사에 응시한 학생 번호");
-			while(!scan1.hasNextInt()) {
-				int num = scan1.nextInt();
-				if( num >=1 && num<=30) {
-					securityEngineer.setStuNum(num);				
+			try(Scanner scan = new Scanner(System.in)) {
+				exit = scan.nextLine();
+				for(int i = 0 ; i < exit.length() ; i++) {
+					item.put(exit.charAt(i), (Integer)10);
 				}
-				else {
-					System.out.println("범위를 벗어났습니다.");
-				}
+			
+				
 			}
-		}
-		System.out.println(securityEngineer.getVector());
+			catch (Exception e) {
+					System.out.println(e);
+			}
 		
-		Vector<Integer> newVec = new Vector<>();
-		newVec = informationEngineer.compare(securityEngineer.getVector());
-		
-		newVec.forEach(elem-> System.out.print(elem + " "));
+		item.forEach((key,value)->System.out.println(key + " : " + value));
 	}
-
 }
